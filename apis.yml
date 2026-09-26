@@ -1,23 +1,69 @@
 aid: aquishair
+
 name: Aquishair
-description: 'Aquishair is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Aquishair is a UK‑based brand that designs and sells premium hair towels, turbans and related hair‑care accessories. Their products focus on quick drying, softness and style, marketed toward women seeking convenient, high‑quality hair solutions. The company emphasizes natural materials and scientific formulation, offering a range that includes the popular Lisse Dair hair turban and other innovative hair‑care items. Aquishair operates an online store and provides detailed product information, brand story, and support through its website.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aquishair/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- HairCare
+- ECommerce
+- UK
+- ConsumerGoods
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aquishair-hosts.yml
+- type: Vendors
+  url: vendors/aquishair-vendors.yml
+- type: TermsOfService
+  url: https://aquishair.co.uk/pages/terms-of-service
+- type: PrivacyPolicy
+  url: https://aquishair.co.uk/pages/privacy-policy-1
+- type: Newsroom
+  url: https://aquishair.co.uk/pages/press
+- type: DomainSecurity
+  url: security/aquishair-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aquishair
+  url: https://aquishair.co.uk
+
+apis: []
+
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-25'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/aquishair
+    status: 403
